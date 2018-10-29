@@ -1,19 +1,13 @@
-
 exports.up = knex => {
   return knex.schema
-    .createTable('users', table => {
+    .createTable("users", table => {
       table.increments('userId').primary();
       table.string('userName');
       table.string('userImage');
     })
-    .createTable('reviews', table => {
+    .createTable("reviews", table => {
       table.increments('reviewId').primary();
-      table
-        .integer('userId')
-        .unsigned()
-        .references('userId')
-        .inTable('users')
-        .onDelete('SET NULL');
+      table.integer('userId');
       table.integer('listingId');
       table.date('date');
       table.text('reviewText');
@@ -28,6 +22,13 @@ exports.up = knex => {
 
 exports.down = knex => {
   return knex.schema
-    .dropTableIfExists('users')
-    .dropTableIfExists('reviews');
+    .dropTableIfExists("users")
+    .dropTableIfExists("reviews");
 };
+
+// table
+//         .integer('userId')
+//         .unsigned()
+//         .references('userId')
+//         .inTable("users")
+//         .onDelete('SET NULL');
