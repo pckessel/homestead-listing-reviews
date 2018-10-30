@@ -1,0 +1,29 @@
+webpackHotUpdate("main",{
+
+/***/ "./node_modules/jquery/dist/jquery.js":
+false,
+
+/***/ "./src/AggregateRating.jsx":
+false,
+
+/***/ "./src/App.jsx":
+/*!*********************!*\
+  !*** ./src/App.jsx ***!
+  \*********************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nSyntaxError: /Users/philkessel/homestead-listing-reviews/src/App.jsx: Unexpected token, expected \\\",\\\" (23:6)\\n\\n\\u001b[0m \\u001b[90m 21 | \\u001b[39m      url\\u001b[33m:\\u001b[39m \\u001b[32m'/listing-reviews'\\u001b[39m\\u001b[33m,\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 22 | \\u001b[39m      data\\u001b[33m:\\u001b[39m \\u001b[33mJSON\\u001b[39m\\u001b[33m.\\u001b[39mstringify(num)\\u001b[0m\\n\\u001b[0m\\u001b[31m\\u001b[1m>\\u001b[22m\\u001b[39m\\u001b[90m 23 | \\u001b[39m      contentType\\u001b[33m:\\u001b[39m \\u001b[32m'application/json'\\u001b[39m\\u001b[33m,\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m    | \\u001b[39m      \\u001b[31m\\u001b[1m^\\u001b[22m\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 24 | \\u001b[39m      method\\u001b[33m:\\u001b[39m \\u001b[32m'GET'\\u001b[39m\\u001b[33m,\\u001b[39m\\u001b[0m\\n\\u001b[0m \\u001b[90m 25 | \\u001b[39m      success\\u001b[33m:\\u001b[39m ( data \\u001b[33m=>\\u001b[39m {\\u001b[0m\\n\\u001b[0m \\u001b[90m 26 | \\u001b[39m        console\\u001b[33m.\\u001b[39mlog(\\u001b[32m'SUCCESFUL GET REQ WITH --->'\\u001b[39m\\u001b[33m,\\u001b[39mdata)\\u001b[0m\\n    at _class.raise (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:3939:15)\\n    at _class.unexpected (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5248:16)\\n    at _class.expect (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5236:28)\\n    at _class.parseObj (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:6644:14)\\n    at _class.parseExprAtom (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:6294:21)\\n    at _class.parseExprAtom (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:3635:52)\\n    at _class.parseExprSubscripts (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5924:21)\\n    at _class.parseMaybeUnary (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5903:21)\\n    at _class.parseExprOps (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5812:21)\\n    at _class.parseMaybeConditional (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5784:21)\\n    at _class.parseMaybeAssign (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5731:21)\\n    at _class.parseExprListItem (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:7003:18)\\n    at _class.parseCallExpressionArguments (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:6124:22)\\n    at _class.parseSubscript (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:6029:32)\\n    at _class.parseSubscripts (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5944:19)\\n    at _class.parseExprSubscripts (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5934:17)\\n    at _class.parseMaybeUnary (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5903:21)\\n    at _class.parseExprOps (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5812:21)\\n    at _class.parseMaybeConditional (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5784:21)\\n    at _class.parseMaybeAssign (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5731:21)\\n    at _class.parseExpression (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:5684:21)\\n    at _class.parseStatementContent (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:7267:21)\\n    at _class.parseStatement (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:7153:17)\\n    at _class.parseBlockOrModuleBlockBody (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:7707:23)\\n    at _class.parseBlockBody (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:7694:10)\\n    at _class.parseBlock (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:7683:10)\\n    at _class.parseFunctionBody (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:6933:24)\\n    at _class.parseFunctionBodyAndFinish (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:6913:10)\\n    at _class.parseMethod (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:6865:10)\\n    at _class.pushClassMethod (/Users/philkessel/homestead-listing-reviews/node_modules/@babel/parser/lib/index.js:8087:30)\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvQXBwLmpzeC5qcyIsInNvdXJjZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/App.jsx\n");
+
+/***/ }),
+
+/***/ "./src/IndividualReview.jsx":
+false,
+
+/***/ "./src/ReviewsList.jsx":
+false,
+
+/***/ "./src/SpecificRatings.jsx":
+false
+
+})
