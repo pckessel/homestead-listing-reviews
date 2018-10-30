@@ -11,7 +11,6 @@ class App extends React.Component {
     this.state = {
       reviews: undefined,
     }
-    this.getReviews = this.getReviews.bind(this);
   }
 
   componentDidMount () {
@@ -39,10 +38,12 @@ class App extends React.Component {
       return (
           <div>
             <div>
-              <AggregateRating reviews={this.state.reviews}/>
+              <AggregateRating reviews={this.state.reviews}
+              />
             </div>
             <div>
-            <ReviewsList reviews={this.state.reviews}/>
+            <ReviewsList reviews={this.state.reviews}
+            />
             </div>
           </div>
         )
