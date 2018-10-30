@@ -16,17 +16,11 @@ const port = 3000;
 
 app.use(bodyParser.json())
 app.use(express.static(__dirname + '/../dist'));
-app.param('listingId', (req, res, next, id) => {
-  if (id) {
-    req.id = id;
-  }
-  next();
-});
+
 
 app.get('/listing-reviews/:listingId', (req, res) => {
-  console.log('THE GET REQ CAME THROUGH!!!!', req.id);
   knex('reviews')
-  .where('listingId', req.id)
+  .where('listingId', req.params.listingId)
   .innerJoin('users', 'reviews.userId', 'users.userId')
     .then( data => res.send(data))
     .catch(err => console.log('ERROR-->', err))

@@ -2,15 +2,15 @@ import React from 'react';
 import IndividualReview from './IndividualReview.jsx';
 import SpecificRatings from './SpecificRatings.jsx';
 
-function ReviewsList () {
+function ReviewsList (props) {
 
 return (
   <div>
     <div>
-      <SpecificRatings/>
+      <SpecificRatings reviews={props.reviews}/>
     </div>
     <div>
-      <IndividualReview/>
+      <IndividualReview reviews={props.reviews}/>
     </div>
   </div>
   )

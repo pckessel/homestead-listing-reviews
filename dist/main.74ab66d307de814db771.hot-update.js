@@ -1,0 +1,15 @@
+webpackHotUpdate("main",{
+
+/***/ "./src/AggregateRating.jsx":
+/*!*********************************!*\
+  !*** ./src/AggregateRating.jsx ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction AggregateRating(props) {\n  var numberOfReviews = props.reviews.length;\n  var aggregateStars = props.reviews.reduce(function (acc, review) {\n    acc += review.accuracyRating;\n    acc += review.check_In_Rating;\n    acc += review.cleanlinessRating;\n    acc += review.communicationRating;\n    acc += review.locationRating;\n    acc += review.valueRating;\n    return acc;\n  }, 0) / numberOfReviews;\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h2\", null, \"`$\", numberOfReviews || 500, \" Reviews`\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", null, \"`$\", aggregateStars || 500, \" Stars`\"))));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (AggregateRating);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvQWdncmVnYXRlUmF0aW5nLmpzeC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3NyYy9BZ2dyZWdhdGVSYXRpbmcuanN4PzJlZGMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcblxuZnVuY3Rpb24gQWdncmVnYXRlUmF0aW5nIChwcm9wcykge1xuICBsZXQgbnVtYmVyT2ZSZXZpZXdzID0gcHJvcHMucmV2aWV3cy5sZW5ndGg7XG4gIGxldCBhZ2dyZWdhdGVTdGFycyA9IHByb3BzLnJldmlld3MucmVkdWNlKCAoYWNjLCByZXZpZXcpID0+IHtcbiAgICBhY2MgKz0gcmV2aWV3LmFjY3VyYWN5UmF0aW5nO1xuICAgIGFjYyArPSByZXZpZXcuY2hlY2tfSW5fUmF0aW5nO1xuICAgIGFjYyArPSByZXZpZXcuY2xlYW5saW5lc3NSYXRpbmc7XG4gICAgYWNjICs9IHJldmlldy5jb21tdW5pY2F0aW9uUmF0aW5nO1xuICAgIGFjYyArPSByZXZpZXcubG9jYXRpb25SYXRpbmc7XG4gICAgYWNjICs9IHJldmlldy52YWx1ZVJhdGluZztcbiAgICByZXR1cm4gYWNjO1xuICB9LDApL251bWJlck9mUmV2aWV3cztcblxucmV0dXJuIChcbiAgPGRpdj5cbiAgICA8ZGl2PlxuICAgICAgPHNwYW4+PGgyPmAke251bWJlck9mUmV2aWV3cyB8fCA1MDB9IFJldmlld3NgPC9oMj48L3NwYW4+XG4gICAgICA8ZGl2PjxzcGFuPmAke2FnZ3JlZ2F0ZVN0YXJzIHx8IDUwMH0gU3RhcnNgPC9zcGFuPjwvZGl2PlxuICAgIDwvZGl2PlxuICA8L2Rpdj5cbiAgKVxufVxuXG5leHBvcnQgZGVmYXVsdCBBZ2dyZWdhdGVSYXRpbmc7Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBUUE7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/AggregateRating.jsx\n");
+
+/***/ })
+
+})

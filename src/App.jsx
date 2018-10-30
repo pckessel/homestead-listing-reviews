@@ -14,8 +14,8 @@ class App extends React.Component {
     this.getReviews = this.getReviews.bind(this);
   }
 
-  ComponentDidMount () {
-    this.getReviews();
+  componentDidMount () {
+    this.getReviews(4);
   }
 
   getReviews(num) {
@@ -36,16 +36,16 @@ class App extends React.Component {
   }
 
   render() {
-    return (
-        <div>
-          <div  onClick={() => this.getReviews(4)}>
-            <AggregateRating/>
-          </div>
+      return (
           <div>
-          <ReviewsList/>
+            <div>
+              <AggregateRating reviews={this.state.reviews}/>
+            </div>
+            <div>
+            <ReviewsList reviews={this.state.reviews}/>
+            </div>
           </div>
-        </div>
-      )
+        )
   }
 
 }
