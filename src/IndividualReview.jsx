@@ -1,21 +1,33 @@
 import React from 'react';
 
-function IndividualReview () {
+function IndividualReview (props) {
 
-  return (
-    <div>
+  if (props.reviews) {
+    return (
       <div>
-        <div>Image Goes Here</div>
-        <div>
-          <div>Name Goes Here</div>
-          <div>Date Goes Here</div>
-        </div>
+        {props.reviews.map( review => {
+          return (
+            <div key={review.reviewId}>
+              <div>
+                <img src={review.userImage} height={"60"} width={"50"}></img>
+                <div>
+                  <div>{review.userName}</div>
+                  <div>{review.date}</div>
+                </div>
+              </div>
+              <div>
+                <div>{review.reviewText}</div>
+              </div>
+            </div>
+          )
+        })}
       </div>
-      <div>
-        <div>The Review Text Goes Here</div>
-      </div>
-    </div>
     )
+  } else {
+    return (
+      <div>NO DATA YET</div>
+    )
+  }
 }
 
 export default IndividualReview;
