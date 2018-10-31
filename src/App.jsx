@@ -14,7 +14,7 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    this.getReviews(4);
+    this.getReviews(7);
   }
 
   getReviews(num) {
@@ -35,20 +35,19 @@ class App extends React.Component {
   }
 
   render() {
-      return (
-          <div>
-            <div>
-              <AggregateRating reviews={this.state.reviews}
-              />
-            </div>
-            <div>
-            <ReviewsList reviews={this.state.reviews}
-            />
-            </div>
-          </div>
-        )
+    return (
+      <div>
+        <div>
+          <AggregateRating reviews={this.state.reviews}
+          />
+        </div>
+        <div>
+        <ReviewsList reviews={this.state.reviews}
+        />
+        </div>
+      </div>
+    )
   }
-
 }
 
 export default App;
