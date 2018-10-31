@@ -1,25 +1,32 @@
 import React from 'react';
+import AggregateRating from './AggregateRating';
+import SpecificRatings from './SpecificRatings';
+import ReviewsList from './ReviewsList';
+
 const $ = require ('jquery');
 
 class App extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      hello: props.hello
+      reviews: undefined,
     }
   }
 
-  ComponentDidMount () {
-    this.getReviews();
+  componentDidMount () {
+    this.getReviews(7);
   }
 
-  getReviews() {
+  getReviews(num) {
     $.ajax({
-      url: '/listing-reviews',
+      url: `/listing-reviews/${num}`,
       contentType: 'application/json',
       method: 'GET',
       success: ( data => {
         console.log('SUCCESFUL GET REQ WITH --->',data)
+        this.setState({
+          reviews: data
+        })
       }),
       error: ( err => {
         console.log('ERROR IN GET REQ-->', err)
@@ -29,10 +36,18 @@ class App extends React.Component {
 
   render() {
     return (
-        <h1>{this.state.hello}</h1>
-      )
+      <div>
+        <div>
+          <AggregateRating reviews={this.state.reviews}
+          />
+        </div>
+        <div>
+        <ReviewsList reviews={this.state.reviews}
+        />
+        </div>
+      </div>
+    )
   }
-
 }
 
 export default App;
