@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 
 function IndividualReview (props) {
 
@@ -7,16 +8,16 @@ function IndividualReview (props) {
       <div>
         {props.reviews.map( review => {
           return (
-            <div key={review.reviewId}>
-              <div>
-                <img src={review.userImage} height={"60"} width={"50"}></img>
-                <div>
-                  <div>{review.userName}</div>
-                  <div>{review.date}</div>
+            <div key={review.reviewId} className={"individualReview"}>
+              <div className={"reviewHeader"}>
+                <img src={review.userImage} className={"userImage"}></img>
+                <div className={"nameDate"}>
+                  <span className={"userName"}>{review.userName}</span>
+                  <div className={"reviewDate"}><Moment format="MMM YYYY">{review.date}</Moment></div>
                 </div>
               </div>
               <div>
-                <div>{review.reviewText}</div>
+                <div className={"reviewText"}>{review.reviewText}</div>
               </div>
             </div>
           )

@@ -1,0 +1,86 @@
+
+/*--------------------------------------------*/
+/*------ app is the parent div to all else----------------------*/
+
+.app {
+  display: grid;
+  grid-template-rows: 3/10fr 7/10fr;
+  grid-template-areas: "ratings"
+                       "reviewsList";
+  grid-gap: 1em;
+}
+
+/*------- Here are joined classes for styling purposes-------------------*/
+
+.ratingsContainer, .reviewsListContainer {
+  background-color: #ccc;
+  padding: 1em;
+}
+
+/*------This is the styling for the first component on page/ the ratings container----*/
+
+.ratingsContainer {
+  grid-area: ratings;
+}
+
+.aggregateReviewsAndStarsContainer {
+  padding-bottom: 3em;
+  border-bottom: solid black 1px;
+}
+.totalReviews {
+  margin-right: 1em;
+}
+.aggregateStars {}
+
+.specificRatings {
+  padding-top: 1em;
+}
+
+/*----This is the styling for the list containg all user reviews-----*/
+
+.reviewsListContainer {}
+
+.reviewsList {
+  grid-area: reviewsList;
+}
+
+.individualReviews {}
+
+/*----This is styling for each review--------------------------------*/
+
+.individualReview {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: solid black 1px;
+}
+
+.reviewHeader {
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-areas: "image nameDate";
+  padding-bottom: 1em;
+  grid-gap: 1px;
+}
+
+.userImage {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  grid-area: image;
+}
+
+.nameDate {
+  display: inline-block;
+  padding-top: 1em;
+  padding-left: 1em;
+  grid-area: nameDate;
+}
+
+.userName {}
+
+.reviewDate {}
+
+.reviewText {
+  grid-area: reviewText;
+}
+

@@ -10,7 +10,7 @@ function SpecificRatings (props) {
 
   if (props.reviews) {
     return (
-      <div>
+      <div className={"specificRatings"}>
         <div>
           Accuracy: {getAverageRating('accuracyRating')}
         </div>

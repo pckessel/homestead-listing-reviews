@@ -36,12 +36,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
+      <div className={"app"}>
+        <div className={"ratingsContainer"}>
           <AggregateRating reviews={this.state.reviews}
           />
         </div>
-        <div>
+        <div className={"reviewsListContainer"}>
         <ReviewsList reviews={this.state.reviews}
         />
         </div>
