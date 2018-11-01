@@ -12,7 +12,8 @@
     "wp-prod": "webpack-dev-server --config ./webpack.config.js --mode production",
     "dev:react": "webpack -d --watch",
     "serv": "nodemon server/index.js --watch",
-    "seed": "knex migrate:latest && knex seed:run"
+    "seed": "knex migrate:latest && knex seed:run",
+    "test": "jest --coverage --watch --config test/jest.config.js"
   },
   "dependencies": {
     "express": "^4.16.4",
@@ -27,6 +28,7 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "enzyme": "^3.7.0",
