@@ -21,7 +21,7 @@ function AggregateRating (props) {
 return (
   <div>
     <div className={"aggregateReviewsAndStarsContainer"}>
-      <span className={"totalReviews"}>{numberOfReviews} Reviews</span>
+      <div className={"totalReviews"}>{numberOfReviews} Reviews</div>
       <span className={"aggregateStars"}>{aggregateStars} Average Stars</span>
     </div>
      <div>

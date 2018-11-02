@@ -23,7 +23,6 @@ class App extends React.Component {
       contentType: 'application/json',
       method: 'GET',
       success: ( data => {
-        console.log('SUCCESFUL GET REQ WITH --->',data)
         this.setState({
           reviews: data
         })

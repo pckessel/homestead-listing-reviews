@@ -11,23 +11,23 @@ function SpecificRatings (props) {
   if (props.reviews) {
     return (
       <div className={"specificRatings"}>
-        <div>
-          Accuracy: {getAverageRating('accuracyRating')}
+        <div className={"rating"}>
+          Accuracy {getAverageRating('accuracyRating')}
         </div>
-        <div>
-          Check in: {getAverageRating('check_In_Rating')}
+        <div className={"rating"}>
+          Check in {getAverageRating('check_In_Rating')}
         </div>
-        <div>
-          Cleanliness: {getAverageRating('cleanlinessRating')}
+        <div className={"rating"}>
+          Cleanliness {getAverageRating('cleanlinessRating')}
         </div>
-        <div>
-          Communication: {getAverageRating('communicationRating')}
+        <div className={"rating"}>
+          Communication {getAverageRating('communicationRating')}
         </div>
-        <div>
-          Location: {getAverageRating('locationRating')}
+        <div className={"rating"}>
+          Location {getAverageRating('locationRating')}
         </div>
-        <div>
-          Value: {getAverageRating('valueRating')}
+        <div className={"rating"}>
+          Value {getAverageRating('valueRating')}
         </div>
       </div>
     )

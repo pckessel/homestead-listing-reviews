@@ -7,14 +7,7 @@
   grid-template-rows: 3/10fr 7/10fr;
   grid-template-areas: "ratings"
                        "reviewsList";
-  grid-gap: 1em;
-}
-
-/*------- Here are joined classes for styling purposes-------------------*/
-
-.ratingsContainer, .reviewsListContainer {
-  background-color: #ccc;
-  padding: 1em;
+  font-family: "Helvetica Neue";
 }
 
 /*------This is the styling for the first component on page/ the ratings container----*/
@@ -24,16 +17,29 @@
 }
 
 .aggregateReviewsAndStarsContainer {
-  padding-bottom: 3em;
-  border-bottom: solid black 1px;
+  padding-bottom: 2em;
+  border-bottom: solid rgb(235, 235, 235) 1px;
 }
 .totalReviews {
   margin-right: 1em;
+  display: inline-block;
+  color: rgb(72, 72, 72);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 30px;
 }
 .aggregateStars {}
 
 .specificRatings {
+  color: rgb(72, 72, 72);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
   padding-top: 1em;
+}
+
+.rating {
+  padding-bottom: 1em;
 }
 
 /*----This is the styling for the list containg all user reviews-----*/
@@ -51,7 +57,7 @@
 .individualReview {
   padding-top: 1em;
   padding-bottom: 1em;
-  border-bottom: solid black 1px;
+  border-bottom: solid rgb(235, 235, 235) 1px;
 }
 
 .reviewHeader {
@@ -63,24 +69,38 @@
 }
 
 .userImage {
-  height: 60px;
-  width: 60px;
+  vertical-align: middle;
+  height: 48px;
+  width: 48px;
   border-radius: 50%;
   grid-area: image;
 }
 
 .nameDate {
+  vertical-align: middle;
+  padding-top: 7px;
   display: inline-block;
-  padding-top: 1em;
-  padding-left: 1em;
   grid-area: nameDate;
 }
 
-.userName {}
+.userName {
+  color: rgb(72, 72, 72);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
 
-.reviewDate {}
+.reviewDate {
+  color: rgb(72, 72, 72);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+}
 
 .reviewText {
+  color: rgb(72, 72, 72);
+  font-size: 16px;
+  font-weight: 300;
   grid-area: reviewText;
 }
 
