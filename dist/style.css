@@ -10,6 +10,31 @@
   font-family: "Helvetica Neue";
 }
 
+  /*---------Styling for each of the stars-------------------*/
+
+.star {
+  height:1em;
+  width:1em;
+  display: inline-block;
+  fill:rgb(0, 132, 137);
+}
+
+.halfStar {
+  /*position:absolute;*/
+}
+
+.emptyStar {
+  height:1em;
+  width:1em;
+  display: inline-block;
+  fill: rgb(216, 216, 216);
+}
+
+.starSpot {
+  display: inline-block;
+  position: relative;
+}
+
 /*------This is the styling for the first component on page/ the ratings container----*/
 
 .ratingsContainer {
@@ -28,7 +53,10 @@
   font-weight: 800;
   line-height: 30px;
 }
-.aggregateStars {}
+
+.aggregateStars {
+  display: inline-block;
+}
 
 .specificRatings {
   color: rgb(72, 72, 72);

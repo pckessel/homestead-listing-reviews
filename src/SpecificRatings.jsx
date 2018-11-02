@@ -12,22 +12,22 @@ function SpecificRatings (props) {
     return (
       <div className={"specificRatings"}>
         <div className={"rating"}>
-          Accuracy {getAverageRating('accuracyRating')}
+          Accuracy {props.createStars(getAverageRating('accuracyRating'))}
         </div>
         <div className={"rating"}>
-          Check in {getAverageRating('check_In_Rating')}
+          Check in {props.createStars(getAverageRating('check_In_Rating'))}
         </div>
         <div className={"rating"}>
-          Cleanliness {getAverageRating('cleanlinessRating')}
+          Cleanliness {props.createStars(getAverageRating('cleanlinessRating'))}
         </div>
         <div className={"rating"}>
-          Communication {getAverageRating('communicationRating')}
+          Communication {props.createStars(getAverageRating('communicationRating'))}
         </div>
         <div className={"rating"}>
-          Location {getAverageRating('locationRating')}
+          Location {props.createStars(getAverageRating('locationRating'))}
         </div>
         <div className={"rating"}>
-          Value {getAverageRating('valueRating')}
+          Value {props.createStars(getAverageRating('valueRating'))}
         </div>
       </div>
     )
