@@ -4,10 +4,13 @@
 
 .app {
   display: grid;
+  grid-template-columns: 700px;
   grid-template-rows: 3/10fr 7/10fr;
   grid-template-areas: "ratings"
                        "reviewsList";
   font-family: "Helvetica Neue";
+  margin-top: 3em;
+  margin-left: 3em;
 }
 
   /*---------Styling for each of the stars-------------------*/
@@ -33,6 +36,7 @@
 .starSpot {
   display: inline-block;
   position: relative;
+  padding-left: 3px;
 }
 
 /*------This is the styling for the first component on page/ the ratings container----*/
@@ -66,8 +70,15 @@
   padding-top: 1em;
 }
 
-.rating {
+.ratingName {
   padding-bottom: 1em;
+  display: inline-block;
+  width: 130px;
+}
+
+.ratingStars {
+  display: inline-block;
+
 }
 
 /*----This is the styling for the list containg all user reviews-----*/
@@ -121,14 +132,14 @@
 .reviewDate {
   color: rgb(72, 72, 72);
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 330;
   line-height: 18px;
 }
 
 .reviewText {
   color: rgb(72, 72, 72);
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 330;
   grid-area: reviewText;
 }
 

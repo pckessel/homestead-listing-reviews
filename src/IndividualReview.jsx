@@ -26,7 +26,7 @@ function IndividualReview (props) {
     )
   } else {
     return (
-      <div>NO DATA YET</div>
+      <div>Loading...</div>
     )
   }
 }
