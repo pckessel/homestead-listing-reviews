@@ -34,7 +34,3 @@ function IndividualReview (props) {
 
 export default IndividualReview;
 
-// { review.reviewText.length > 180 ?
-//                     (<div className={"shortenedReview"}>{review.reviewText.slice(0,180) + "... "}<span>show more</span></div>):
-//                     review.reviewText
-//                   }
