@@ -2,6 +2,7 @@ import React from 'react';
 import AggregateRating from './AggregateRating';
 import SpecificRatings from './SpecificRatings';
 import ReviewsList from './ReviewsList';
+import stars from './stars.jsx';
 
 const $ = require ('jquery');
 
@@ -23,7 +24,6 @@ class App extends React.Component {
       contentType: 'application/json',
       method: 'GET',
       success: ( data => {
-        console.log('SUCCESFUL GET REQ WITH --->',data)
         this.setState({
           reviews: data
         })
@@ -34,14 +34,36 @@ class App extends React.Component {
     })
   }
 
+  createStars (rating) {
+    var results = [];
+    let counter = 1;
+    while(counter <= 5) {
+      if (rating > 0.75) {
+        results.push(<div className={"starSpot"}>{stars.star}</div>);
+        counter++;
+        rating--;
+      } else if (rating > 0.25 && rating < 0.75) {
+        results.push(<div className={"starSpot"}>{stars.halfStar}</div>);
+        counter++;
+        rating--;
+      } else {
+        results.push(<div className={"starSpot"}>{stars.emptyStar}</div>);
+        counter++;
+        rating--;
+      }
+    }
+    return results;
+  }
+
   render() {
     return (
-      <div>
-        <div>
+      <div className={"app"}>
+        <div className={"ratingsContainer"}>
           <AggregateRating reviews={this.state.reviews}
+            createStars={this.createStars}
           />
         </div>
-        <div>
+        <div className={"reviewsListContainer"}>
         <ReviewsList reviews={this.state.reviews}
         />
         </div>

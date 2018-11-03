@@ -1,0 +1,153 @@
+
+/*--------------------------------------------*/
+/*------ app is the parent div to all else----------------------*/
+
+.app {
+  display: grid;
+  grid-template-columns: 75%;
+  grid-template-rows: 3/10fr 7/10fr;
+  grid-template-areas: "ratings"
+                       "reviewsList";
+  font-family: "Helvetica Neue";
+  margin-top: 3em;
+  margin-left: 3em;
+}
+
+  /*---------Styling for each of the stars-------------------*/
+
+.star {
+  height:1em;
+  width:1em;
+  display: inline-block;
+  fill:rgb(0, 132, 137);
+}
+
+.halfStar {
+  /*position:absolute;*/
+}
+
+.emptyStar {
+  height:1em;
+  width:1em;
+  display: inline-block;
+  fill: rgb(216, 216, 216);
+}
+
+.starSpot {
+  display: inline-block;
+  position: relative;
+  padding-left: 3px;
+}
+
+/*------This is the styling for the first component on page/ the ratings container----*/
+
+.ratingsContainer {
+  grid-area: ratings;
+}
+
+.aggregateReviewsAndStarsContainer {
+  padding-bottom: 2em;
+  border-bottom: solid rgb(235, 235, 235) 1px;
+}
+.totalReviews {
+  margin-right: 1em;
+  display: inline-block;
+  color: rgb(72, 72, 72);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 30px;
+}
+
+.aggregateStars {
+  display: inline-block;
+}
+
+.specificRatings {
+  color: rgb(72, 72, 72);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  padding-top: 1em;
+}
+
+.ratingName {
+  padding-bottom: 1em;
+  display: inline-block;
+  width: 130px;
+}
+
+.ratingStars {
+  display: inline-block;
+
+}
+
+/*----This is the styling for the list containg all user reviews-----*/
+
+.reviewsListContainer {}
+
+.reviewsList {
+  grid-area: reviewsList;
+}
+
+.individualReviews {}
+
+/*----This is styling for each review--------------------------------*/
+
+.individualReview {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: solid rgb(235, 235, 235) 1px;
+}
+
+.reviewHeader {
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-areas: "image nameDate";
+  padding-bottom: 1em;
+  grid-gap: 1px;
+}
+
+.userImage {
+  vertical-align: middle;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  grid-area: image;
+}
+
+.nameDate {
+  vertical-align: middle;
+  padding-top: 7px;
+  display: inline-block;
+  grid-area: nameDate;
+}
+
+.userName {
+  color: rgb(72, 72, 72);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.reviewDate {
+  color: rgb(72, 72, 72);
+  font-size: 14px;
+  font-weight: 330;
+  line-height: 18px;
+}
+
+.reviewText {
+  color: rgb(72, 72, 72);
+  font-size: 16px;
+  font-weight: 330;
+  grid-area: reviewText;
+}
+
+.showMore {
+  display: inline-block;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+

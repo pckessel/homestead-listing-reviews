@@ -1,6 +1,9 @@
 import React from 'react';
+import SpecificRatings from './SpecificRatings.jsx';
+import stars from './stars.jsx';
 
 function AggregateRating (props) {
+
   if (props.reviews) {
     var numberOfReviews = props.reviews.length;
     var aggregateStars = Number.parseFloat(props.reviews.map( review => {
@@ -19,9 +22,15 @@ function AggregateRating (props) {
 
 return (
   <div>
-    <div>
-      <span><h2>{numberOfReviews} Reviews</h2></span>
-      <div><span>{aggregateStars} Average Stars</span></div>
+    <div className={"aggregateReviewsAndStarsContainer"}>
+      <div className={"totalReviews"}>{numberOfReviews} Reviews</div>
+      <div className={"aggregateStars"}>
+        {props.createStars(aggregateStars)}
+      </div>
+    </div>
+     <div>
+      <SpecificRatings reviews={props.reviews}
+        createStars={props.createStars}/>
     </div>
   </div>
   )
