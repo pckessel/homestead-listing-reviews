@@ -17,8 +17,6 @@ function SpecificRatings (props) {
     {valueRating: 'Value'}
   ]
 
-  var results = [];
-
   if (props.reviews) {
     return (
       <div className={"specificRatings"}>

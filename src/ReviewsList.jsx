@@ -1,6 +1,5 @@
 import React from 'react';
 import IndividualReview from './IndividualReview.jsx';
-import SpecificRatings from './SpecificRatings.jsx';
 
 function ReviewsList (props) {
 

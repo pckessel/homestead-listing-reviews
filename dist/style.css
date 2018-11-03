@@ -4,7 +4,7 @@
 
 .app {
   display: grid;
-  grid-template-columns: 700px;
+  grid-template-columns: 75%;
   grid-template-rows: 3/10fr 7/10fr;
   grid-template-areas: "ratings"
                        "reviewsList";
@@ -141,5 +141,13 @@
   font-size: 16px;
   font-weight: 330;
   grid-area: reviewText;
+}
+
+.showMore {
+  display: inline-block;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
