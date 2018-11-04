@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    this.getReviews(7);
+    this.getReviews(19);
   }
 
   getReviews(num) {
@@ -24,6 +24,7 @@ class App extends React.Component {
       contentType: 'application/json',
       method: 'GET',
       success: ( data => {
+        console.log (data);
         this.setState({
           reviews: data
         })
