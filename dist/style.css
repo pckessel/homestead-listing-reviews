@@ -2,7 +2,7 @@
 /*--------------------------------------------*/
 /*------ app is the parent div to all else----------------------*/
 
-.app {
+.listingReviewsWrapper {
   display: grid;
   grid-template-columns: 75%;
   grid-template-rows: 3/10fr 7/10fr;
@@ -20,10 +20,6 @@
   width:1em;
   display: inline-block;
   fill:rgb(0, 132, 137);
-}
-
-.halfStar {
-  /*position:absolute;*/
 }
 
 .emptyStar {
@@ -83,13 +79,9 @@
 
 /*----This is the styling for the list containg all user reviews-----*/
 
-.reviewsListContainer {}
-
 .reviewsList {
   grid-area: reviewsList;
 }
-
-.individualReviews {}
 
 /*----This is styling for each review--------------------------------*/
 

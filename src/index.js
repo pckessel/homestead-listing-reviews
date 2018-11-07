@@ -1,7 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// for running on local machine, uncomment these lines and comment out the Window Assignment
+// import React from 'react';
+// import ReactDOM from 'react-dom';
 import App from './App.jsx';
 
-ReactDOM.render( <App />, document.getElementById('app') );
+Window.Reviews = App;
+// ReactDOM.render( <App />, document.getElementById('app') );
 
 

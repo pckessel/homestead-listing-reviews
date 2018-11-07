@@ -20,7 +20,7 @@ function SpecificRatings (props) {
   if (props.reviews) {
     return (
       <div className={"specificRatings"}>
-        {ratingNames.map( ratingObj => {
+        {ratingNames.map( (ratingObj, index) => {
           var ratingName =undefined;
           var ratingHtmlName =undefined;
           for (var key in ratingObj) {
@@ -29,8 +29,8 @@ function SpecificRatings (props) {
           }
           return (
             <div>
-              <div className={"ratingName"}> {ratingHtmlName} </div>
-              <div className={"ratingStars"}> {props.createStars(getAverageRating(ratingName))} </div>
+              <div className={"ratingName"} key={index}> {ratingHtmlName} </div>
+              <div className={"ratingStars"} key={props.reviews.userName}> {props.createStars(getAverageRating(ratingName))} </div>
             </div>
           )
         })}
