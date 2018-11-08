@@ -13,7 +13,7 @@ const knex = require('knex')({
 });
 
 const app = express();
-const port = 3003;
+const port = process.env.PORT || 3003;
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/../dist')));
@@ -22,7 +22,7 @@ app.use((req, res, next) => {
   res.header(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept'
-    );
+  );
   next();
 });
 
