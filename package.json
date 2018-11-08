@@ -11,7 +11,7 @@
     "wp-dev": "webpack-dev-server --config ./webpack.config.js --mode development",
     "wp-prod": "webpack-dev-server --config ./webpack.config.js --mode production",
     "dev:react": "webpack -d --watch",
-    "start": "nodemon server/index.js --watch",
+    "start": "node server/index.js",
     "seed": "knex migrate:latest && knex seed:run",
     "test": "jest --coverage --watch --config test/jest.config.js"
   },
