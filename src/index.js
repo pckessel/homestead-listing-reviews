@@ -3,7 +3,5 @@
 // import ReactDOM from 'react-dom';
 import App from './App.jsx';
 
-Window.Reviews = App;
+window.Reviews = App;
 // ReactDOM.render( <App />, document.getElementById('app') );
-
-
