@@ -12,19 +12,21 @@ class App extends React.Component {
     this.state = {
       reviews: undefined,
     }
+    this.getReviews = this.getReviews.bind(this);
   }
 
-  componentDidMount () {
-    this.getReviews(19);
+  componentDidMount() {
+    const rand = Math.floor(Math.random() * 101)
+    const id = Number(window.location.pathname.replace(/\//, '')) || rand;
+    this.getReviews(id);
   }
 
   getReviews(num) {
     $.ajax({
-      url: `/listing-reviews/${num}`,
+      url: `http://localhost:3003/listing/${num}`,
       contentType: 'application/json',
       method: 'GET',
       success: ( data => {
-        console.log (data);
         this.setState({
           reviews: data
         })
@@ -58,7 +60,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={"app"}>
+      <div className={"listingReviewsWrapper"}>
         <div className={"ratingsContainer"}>
           <AggregateRating reviews={this.state.reviews}
             createStars={this.createStars}
