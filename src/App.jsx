@@ -3,6 +3,7 @@ import AggregateRating from './AggregateRating';
 import SpecificRatings from './SpecificRatings';
 import ReviewsList from './ReviewsList';
 import stars from './stars.jsx';
+import './style.css';
 
 const $ = require ('jquery');
 
