@@ -25,10 +25,3 @@ exports.down = knex => {
     .dropTableIfExists("users")
     .dropTableIfExists("reviews");
 };
-
-// table
-//         .integer('userId')
-//         .unsigned()
-//         .references('userId')
-//         .inTable("users")
-//         .onDelete('SET NULL');

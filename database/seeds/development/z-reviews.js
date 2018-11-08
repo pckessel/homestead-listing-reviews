@@ -2,7 +2,7 @@ const faker = require("faker");
 
 let createReview = (knex, userId) => {
   return knex("reviews").insert({
-    listingId: faker.random.number(50),
+    listingId: faker.random.number(100),
     userId,
     date: faker.date.between('2016-01-01', '2018-12-31'),
     reviewText: faker.lorem.paragraph(),
@@ -15,17 +15,17 @@ let createReview = (knex, userId) => {
   });
 };
 
-exports.seed = function(knex, Promise) {
-  return knex("reviews").del()
-    .then(function() {
-      let reviews = [];
+exports.seed = function (knex, Promise) {
+  return knex('reviews').del()
+    .then(() => {
+      const reviews = [];
       function getUserId() {
         return Math.floor(Math.random() * Math.floor(101));
       }
 
       for (let i = 1; i <= 1000; i++) {
-        reviews.push(createReview( knex, getUserId() ));
+        reviews.push(createReview(knex, getUserId()));
       }
       return Promise.all(reviews);
     });
-}
+};
