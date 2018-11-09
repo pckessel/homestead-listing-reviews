@@ -1,17 +1,21 @@
+// const knex = require('knex')({
+//   client: 'pg',
+//   version: '10.5',
+//   connection: {
+//     port: process.env.RDS_PORT,
+//     host: process.env.RDS_HOSTNAME,
+//     user: process.env.RDS_USERNAME,
+//     password: process.env.RDS_PASSWORD,
+//     database: process.env.RDS_DB_NAME
+//   },
+// });
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const knex = require('knex')({
-  client: 'pg',
-  version: '10.5',
-  connection: {
-    port: process.env.RDS_PORT,
-    host: process.env.RDS_HOSTNAME,
-    user: process.env.RDS_USERNAME,
-    password: process.env.RDS_PASSWORD,
-    database: process.env.RDS_DB_NAME
-  },
-});
+const environment = 'development';
+const config = require('../knexfile.js')[environment];
+const knex = require('knex')(config);
 
 const app = express();
 const port = process.env.PORT || 3003;
