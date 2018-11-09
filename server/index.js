@@ -1,16 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-// const knex = require('knex')({
-//   client: 'pg',
-//   version: '10.5',
-//   connection: {
-//     host: '127.0.0.1',
-//     user: '',
-//     password: '',
-//     database: 'hs_listing_reviews',
-//   },
-// });
 const knex = require('knex')({
   client: 'pg',
   version: '10.5',
