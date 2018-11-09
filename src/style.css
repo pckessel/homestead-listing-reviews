@@ -75,13 +75,13 @@
 
 }
 
-/*----This is the styling for the list containg all user reviews-----*/
+/*-----This is the styling for the list containg all user reviews-----*/
 
 .reviewsList {
   grid-area: reviewsList;
 }
 
-/*----This is styling for each review--------------------------------*/
+/*------This is styling for each review--------------------------------*/
 
 .individualReview {
   padding-top: 1em;
