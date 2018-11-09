@@ -4,7 +4,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/hs_listing_reviews',
+    connection: process.env.RDS_HOSTNAME,
     migrations: {
       directory: __dirname + '/database/migrations'
     },
