@@ -13,7 +13,8 @@
     "dev:react": "webpack -d --watch",
     "start": "node server/index.js",
     "seed": "knex migrate:latest && knex seed:run",
-    "test": "jest --coverage --watch --config test/jest.config.js"
+    "test": "jest --coverage --watch --config test/jest.config.js",
+    "prestart": "knex migrate:latest && knex seed:run"
   },
   "dependencies": {
     "express": "^4.16.4",
