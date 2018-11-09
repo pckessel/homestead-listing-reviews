@@ -24,7 +24,7 @@ class App extends React.Component {
 
   getReviews(num) {
     $.ajax({
-      url: `http://localhost:3003/listing/${num}`,
+      url: `http://homesteadreviews-env.pvxn2atkez.us-west-2.elasticbeanstalk.com/listing/${num}`,
       contentType: 'application/json',
       method: 'GET',
       success: ( data => {
