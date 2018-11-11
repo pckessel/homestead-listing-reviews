@@ -29,18 +29,20 @@ let createRecord = (knex, userId, userImage) => {
   })
 }
 
-exports.seed = function(knex, Promise) {
+exports.seed = function (knex, Promise) {
   // Deletes ALL existing entries
   return knex("users").del()
     .then(function () {
       // Inserts seed entries
       let records = [];
-      function getIndex () {
-        return Math.floor(Math.random() * Math.floor(21));
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
       }
 
       for (let i = 0; i < 100; i++ ) {
-        records.push(createRecord( knex, i, images[getIndex()] ))
+        records.push(createRecord( knex, i, `https://s3-us-west-1.amazonaws.com/hslistingreviews/images/user${getRandomInt(10, 38)}.jpg` ))
       }
       return Promise.all(records)
     });
