@@ -36,13 +36,14 @@ exports.seed = function (knex, Promise) {
       // Inserts seed entries
       let records = [];
       function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min;
+        minNum = Math.ceil(min);
+        maxNum = Math.floor(max);
+        return Math.floor(Math.random() * (maxNum - minNum)) + minNum;
       }
 
       for (let i = 0; i < 100; i++ ) {
-        records.push(createRecord( knex, i, `https://s3-us-west-1.amazonaws.com/hslistingreviews/images/user${getRandomInt(10, 47)}.jpg` ))
+        let image = getRandomInt(10, 47);
+        records.push(createRecord( knex, i, `https://s3-us-west-1.amazonaws.com/hslistingreviews/images/user${image}.jpg` ))
       }
       return Promise.all(records)
     });
