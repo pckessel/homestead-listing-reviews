@@ -42,7 +42,7 @@ exports.seed = function (knex, Promise) {
       }
 
       for (let i = 0; i < 100; i++ ) {
-        records.push(createRecord( knex, i, `https://s3-us-west-1.amazonaws.com/hslistingreviews/images/user${getRandomInt(10, 38)}.jpg` ))
+        records.push(createRecord( knex, i, `https://s3-us-west-1.amazonaws.com/hslistingreviews/images/user${getRandomInt(10, 47)}.jpg` ))
       }
       return Promise.all(records)
     });
