@@ -12,13 +12,14 @@
     "wp-prod": "webpack-dev-server --config ./webpack.config.js --mode production",
     "dev:react": "webpack -d --watch",
     "start": "node server/index.js",
-    "seed": "knex migrate:latest && knex seed:run",
     "test": "jest --coverage --watch --config test/jest.config.js",
-    "prestart": "knex migrate:latest && knex seed:run"
+    "buildTables": "node data/database/dbSchema.js",
+    "insertData": "node data/database/insertMockData.js",
+    "createData": "node data/dataCreation/createData.js",
+    "setUpData": "npm run buildTables && npm run createData && npm run insertData"
   },
   "dependencies": {
     "express": "^4.16.4",
-    "faker": "^4.1.0",
     "jquery": "^3.3.1",
     "knex": "^0.15.2",
     "moment": "^2.22.2",
@@ -34,6 +35,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
+    "chance": "^1.0.18",
     "css-loader": "^1.0.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
