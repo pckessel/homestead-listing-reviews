@@ -11,7 +11,7 @@
     "wp-dev": "webpack-dev-server --config ./webpack.config.js --mode development",
     "wp-prod": "webpack-dev-server --config ./webpack.config.js --mode production",
     "dev:react": "webpack -d --watch",
-    "start": "node server/index.js",
+    "start": "nodemon server/index.js",
     "test": "jest --coverage --watch --config test/jest.config.js",
     "buildTables": "node data/database/dbSchema.js",
     "insertData": "node data/database/insertMockData.js",
@@ -19,8 +19,8 @@
     "setUpData": "npm run buildTables && npm run createData && npm run insertData"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "express": "^4.16.4",
-    "jquery": "^3.3.1",
     "knex": "^0.15.2",
     "moment": "^2.22.2",
     "pg": "^7.6.0",

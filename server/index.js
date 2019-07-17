@@ -1,12 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const environment = 'development';
-const config = require('../knexfile.js')[environment];
-const knex = require('knex')(config);
+const db = require('../data/database/dbConnect.js');
+
+// const environment = 'development';
+// const config = require('../knexfile.js')[environment];
+// const knex = require('knex')(config);
 
 const app = express();
-const port = process.env.PORT || 3003;
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/../dist')));
@@ -20,11 +22,13 @@ app.use((req, res, next) => {
 });
 
 app.get('/listing/:listingId', (req, res) => {
-  knex('reviews')
-    .where('listingId', req.params.listingId)
-    .innerJoin('users', 'reviews.userId', 'users.userId')
-    .then(data => res.send(data))
-    .catch(err => console.log('ERROR-->', err));
+  const queryString = `SELECT * FROM new_reviews INNER JOIN new_users on new_reviews.userId = new_users.userId  WHERE listingId = ${req.params.listingId};`;
+
+  // CLEAN UP THE BACK END CODE SO WE ARE SENDING ONLY WHAT WE NEED
+
+  db.query(queryString)
+    .then( dbres => res.send(dbres.rows))
+    .catch( err => console.log('db Error-->', err))
 });
 
 const html = path.join(__dirname, '/../dist/index.html');
@@ -40,3 +44,8 @@ app.get('/bundle.js', (req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+
+// SELECT * FROM new_reviews WHERE listingId = 5 INNER JOIN new_users on new_reviews.userId = new_users.userId
+
+// SELECT * FROM new_reviews INNER JOIN new_users on new_reviews.userId = new_users.userId  WHERE listingId = 40;

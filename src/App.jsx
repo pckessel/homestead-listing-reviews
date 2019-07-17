@@ -4,8 +4,7 @@ import SpecificRatings from './SpecificRatings';
 import ReviewsList from './ReviewsList';
 import stars from './stars.jsx';
 import './style.css';
-
-const $ = require ('jquery');
+import axios from 'axios';
 
 class App extends React.Component {
   constructor (props) {
@@ -23,19 +22,10 @@ class App extends React.Component {
   }
 
   getReviews(num) {
-    $.ajax({
-      url: `http://winner-env.gycpwmmc4u.us-west-2.elasticbeanstalk.com/listing/${num}`,
-      contentType: 'application/json',
-      method: 'GET',
-      success: ( data => {
-        this.setState({
-          reviews: data
-        })
-      }),
-      error: ( err => {
-        console.log('ERROR IN GET REQ-->', err)
-      })
-    })
+    axios
+      .get(`/listing/${num}`)
+      .then( data =>  this.setState({ reviews: data.data }) )
+      .catch(err => console.log("ERROR WITH REQUEST-->", err));
   }
 
   createStars (rating) {
@@ -62,7 +52,7 @@ class App extends React.Component {
   render() {
     return (
       <div className={"listingReviewsWrapper"}>
-        <div className={"ratingsContainer"}>
+        {/* <div className={"ratingsContainer"}>
           <AggregateRating reviews={this.state.reviews}
             createStars={this.createStars}
           />
@@ -70,7 +60,7 @@ class App extends React.Component {
         <div className={"reviewsListContainer"}>
         <ReviewsList reviews={this.state.reviews}
         />
-        </div>
+        </div> */}
       </div>
     )
   }

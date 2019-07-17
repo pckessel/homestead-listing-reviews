@@ -27,14 +27,3 @@ const createRecordsTableText = `CREATE TABLE IF NOT EXISTS new_reviews (
   pg.query(createRecordsTableText)
     .then(res => console.log("Successfully Created records table", res))
     .catch(err => console.log("Error with records table creation", err));
-
-// pg.query(createUserTableText)
-//   .then(res => console.log("Successfully Created users table", res))
-//   .catch(err => console.log("Error with users table creation", err));
-
-// pg.query(createRecordsTableText)
-//   .then(res => console.log("Successfully Created records table", res))
-//   .catch(err => console.log("Error with records table creation", err));
-
-// from the database directory, run the following command to build schema:
-// node pg-schema.js
